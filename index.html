@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salik | Web Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body {
+      background: linear-gradient(180deg, #030616, #0a1a35);
+      color: #f5f7ff;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 10%;
+      position: sticky;
+      top: 0;
+      background: rgba(5,10,25,0.7);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, #4f9eff, #00e0ff);
+      background-clip: text;
+
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    nav a {
+      margin: 0 14px;
+      text-decoration: none;
+      color: #cdd7ff;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+
+    .btn {
+      background: linear-gradient(90deg, #4f9eff, #00e0ff);
+      border: none; color: #01132b;
+      padding: 10px 18px; border-radius: 10px;
+      font-weight: 700; cursor: pointer;
+      transition: .3s;
+      box-shadow: 0 10px 30px rgba(79,158,255,0.25);
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(79,158,255,0.4);
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 30px;
+      min-height: 85vh;
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .hero-text h1 span { color: #4f9eff; }
+    .hero-text p {
+      color: #cfd8e6;
+      margin-bottom: 25px;
+    }
+    .hero img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    }
+
+    /* ABOUT */
+    .about p {
+      color: #cfd8e6;
+      margin-top: 15px;
+      line-height: 1.8;
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+    .project-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: .3s;
+      backdrop-filter: blur(8px);
+    }
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    }
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .project-card .content {
+      padding: 18px;
+    }
+    .project-card h3 {
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .project-card p {
+      color: #a7b9d8;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    /* CONTACT */
+    .contact form {
+      display: flex; flex-direction: column; gap: 12px;
+      margin-top: 20px;
+    }
+    input, textarea {
+      background: rgba(255,255,255,0.05);
+      border: none; color: #fff;
+      padding: 12px; border-radius: 10px;
+      outline: none; resize: none;
+    }
+
+    footer {
+      text-align: center; color: #8ea4cf;
+      padding: 25px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">Salik</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="https://web-1-bao3.vercel.app" target="_blank" class="btn">Live Site</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm <span>Salik</span></h1>
+      <h2>Professional Web Developer</h2>
+      <p>I build fast, modern, and elegant websites that combine design and technology to deliver great user experiences.</p>
+      <a href="#projects" class="btn">Explore My Work</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1000&auto=format&fit=crop" alt="Salik Web Developer">
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Salik, a creative Web Developer passionate about building high-quality digital experiences. I specialize in modern front-end frameworks and crafting responsive, user-friendly web solutions.</p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?auto=format&fit=crop&w=800&q=80" alt="Dynamic Capital">
+        <div class="content">
+          <h3>Dynamic Capital</h3>
+          <p>Finance company website featuring animations, data counters, and contact form integration.</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+<div class="project-card">
+  <img src="https://play-lh.googleusercontent.com/GdXjVGXQ90eVNpb1VoXWGT3pff2M9oe3yDdYGIsde7W9h3s2S6FDLfo1uO-gljBZ1QXO" alt="Weather App Screenshot">
+  <div class="content">
+    <h3>Weather App Project</h3>
+    <p>A free, open-source weather application showing live forecast, hourly updates and material-design UI.</p>
+    
+  </div>
+</div>
+
+      
+
+      <div class="project-card">
+        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR9a5Daprq6HLkG54fn-m5J3CAPr38RArh33xdCOKXBZCdM4qzTiuPW4kGbCPYz" alt="Shopping App">
+        <div class="content">
+          <h3>Mobile Shopping App</h3>
+          <p>eCommerce platform with category filters, smooth navigation, and user dashboard.</p>
+          
+        </div>
+      </div>
+      
+
+      <div class="project-card">
+        <img src="https://www.cssacademy.com/static/2c76042b22b3fb0954c81a7a006e957c/ee604/calculator.png" alt="Portfolio V2">
+        <div class="content">
+          <h3>calculator</h3>
+          <p>1. HTML (The Structure)
+The first step is to create the basic layout and structure of the calculator using HTML. This involves defining all the elements the user sees.
+2. CSS (The Design and Layout)
+Once the structure is ready, CSS is used to make it look like a functional calculator and organize the buttons neatly.
+3. JavaScript (The Functionality/Logic)
+JavaScript is the brain of the calculator; it handles all the user interaction and performs the actual math.</p>
+        </div>
+      </div>
+
+      
+
+     
+
+      
+
+ 
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" alt="Portfolio Template">
+        <div class="content">
+          <h3>Portfolio Template</h3>
+          <p>Custom HTML portfolio theme built for freelancers and developers.</p>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Let's Connect</h2>
+    <p>If you’d like to discuss a project or collaboration, I’d love to hear from you!</p>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    © <script>document.write(new Date().getFullYear());</script> Salik — Web Developer. All rights reserved.
+  </footer>
+</body>
+</html>
