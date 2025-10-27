@@ -31,7 +31,6 @@
       font-weight: 800;
       background: linear-gradient(90deg, #4f9eff, #00e0ff);
       background-clip: text;
-
       -webkit-background-clip: text;
       color: transparent;
     }
@@ -44,10 +43,7 @@
       transition: .3s;
     }
 
-    nav a:hover {
-      color: #fff;
-    }
-
+    nav a:hover { color: #fff; }
 
     .btn {
       background: linear-gradient(90deg, #4f9eff, #00e0ff);
@@ -68,7 +64,6 @@
       padding: 60px 20px;
     }
 
-    /* HERO */
     .hero {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -76,29 +71,21 @@
       gap: 30px;
       min-height: 85vh;
     }
-    .hero-text h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
+    .hero-text h1 { font-size: 3rem; margin-bottom: 10px; }
     .hero-text h1 span { color: #4f9eff; }
-    .hero-text p {
-      color: #cfd8e6;
-      margin-bottom: 25px;
-    }
+    .hero-text p { color: #cfd8e6; margin-bottom: 25px; }
     .hero img {
       width: 100%;
       border-radius: 15px;
       box-shadow: 0 10px 40px rgba(0,0,0,0.4);
     }
 
-    /* ABOUT */
     .about p {
       color: #cfd8e6;
       margin-top: 15px;
       line-height: 1.8;
     }
 
-    /* PROJECTS */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -121,20 +108,10 @@
       height: 200px;
       object-fit: cover;
     }
-    .project-card .content {
-      padding: 18px;
-    }
-    .project-card h3 {
-      color: #fff;
-      margin-bottom: 8px;
-    }
-    .project-card p {
-      color: #a7b9d8;
-      font-size: 0.95rem;
-      margin-bottom: 10px;
-    }
+    .project-card .content { padding: 18px; }
+    .project-card h3 { color: #fff; margin-bottom: 8px; }
+    .project-card p { color: #a7b9d8; font-size: 0.95rem; margin-bottom: 10px; }
 
-    /* CONTACT */
     .contact form {
       display: flex; flex-direction: column; gap: 12px;
       margin-top: 20px;
@@ -187,7 +164,6 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="projects-grid">
-      
       <div class="project-card">
         <img src="https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?auto=format&fit=crop&w=800&q=80" alt="Dynamic Capital">
         <div class="content">
@@ -196,47 +172,31 @@
           <a href="#" class="btn">View Project</a>
         </div>
       </div>
-<div class="project-card">
-  <img src="https://play-lh.googleusercontent.com/GdXjVGXQ90eVNpb1VoXWGT3pff2M9oe3yDdYGIsde7W9h3s2S6FDLfo1uO-gljBZ1QXO" alt="Weather App Screenshot">
-  <div class="content">
-    <h3>Weather App Project</h3>
-    <p>A free, open-source weather application showing live forecast, hourly updates and material-design UI.</p>
-    
-  </div>
-</div>
 
-      
+      <div class="project-card">
+        <img src="https://play-lh.googleusercontent.com/GdXjVGXQ90eVNpb1VoXWGT3pff2M9oe3yDdYGIsde7W9h3s2S6FDLfo1uO-gljBZ1QXO" alt="Weather App Screenshot">
+        <div class="content">
+          <h3>Weather App Project</h3>
+          <p>A free, open-source weather application showing live forecast, hourly updates and material-design UI.</p>
+        </div>
+      </div>
 
       <div class="project-card">
         <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR9a5Daprq6HLkG54fn-m5J3CAPr38RArh33xdCOKXBZCdM4qzTiuPW4kGbCPYz" alt="Shopping App">
         <div class="content">
           <h3>Mobile Shopping App</h3>
           <p>eCommerce platform with category filters, smooth navigation, and user dashboard.</p>
-          
         </div>
       </div>
-      
 
       <div class="project-card">
         <img src="https://www.cssacademy.com/static/2c76042b22b3fb0954c81a7a006e957c/ee604/calculator.png" alt="Portfolio V2">
         <div class="content">
-          <h3>calculator</h3>
-          <p>1. HTML (The Structure)
-The first step is to create the basic layout and structure of the calculator using HTML. This involves defining all the elements the user sees.
-2. CSS (The Design and Layout)
-Once the structure is ready, CSS is used to make it look like a functional calculator and organize the buttons neatly.
-3. JavaScript (The Functionality/Logic)
-JavaScript is the brain of the calculator; it handles all the user interaction and performs the actual math.</p>
+          <h3>Calculator</h3>
+          <p>HTML + CSS + JavaScript calculator project with modern layout and clean design.</p>
         </div>
       </div>
 
-      
-
-     
-
-      
-
- 
       <div class="project-card">
         <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" alt="Portfolio Template">
         <div class="content">
@@ -244,9 +204,6 @@ JavaScript is the brain of the calculator; it handles all the user interaction a
           <p>Custom HTML portfolio theme built for freelancers and developers.</p>
         </div>
       </div>
-
-
-
     </div>
   </section>
 
@@ -261,6 +218,50 @@ JavaScript is the brain of the calculator; it handles all the user interaction a
       <button class="btn">Send Message</button>
     </form>
   </section>
+
+  <!-- 🔥 FIREBASE SCRIPT -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+    import { getFirestore, addDoc, collection } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyD-GsJWGuMAHHQLFZZd_57qwiOn-gCLUTI",
+      authDomain: "salik-portfolio.firebaseapp.com",
+      projectId: "salik-portfolio",
+      storageBucket: "salik-portfolio.firebasestorage.app",
+      messagingSenderId: "202986328887",
+      appId: "1:202986328887:web:b24675b9f8f5a3fafec0b2",
+      measurementId: "G-C6YPTF0HCE"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const name = form.querySelector('input[placeholder="Your Name"]').value;
+      const email = form.querySelector('input[placeholder="Your Email"]').value;
+      const message = form.querySelector('textarea').value;
+
+      try {
+        await addDoc(collection(db, "contacts"), {
+          name,
+          email,
+          message,
+          timestamp: new Date()
+        });
+
+        alert("✅ Message Sent Successfully!");
+        form.reset();
+      } catch (error) {
+        console.error("Error adding document: ", error);
+        alert("❌ Something went wrong!");
+      }
+    });
+  </script>
 
   <footer>
     © <script>document.write(new Date().getFullYear());</script> Salik — Web Developer. All rights reserved.
